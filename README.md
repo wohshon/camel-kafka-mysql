@@ -15,4 +15,6 @@ oc run kafka-producer -i --image=registry.redhat.io/amq7/amq-streams-kafka-25-rh
 
 mvn clean fabric8:deploy -Popenshift
 
+oc patch -n fuse-app hawtio.hawt.io/fuse-console --type=merge -p '{"metadata": {"finalizers":null}}'
+
 
