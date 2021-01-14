@@ -6,6 +6,9 @@ items:
   kind: "Service"
   metadata:
     annotations:
+      fabric8.io/git-commit: "3b7b2e6799eb572004cd73ea4d59cf8c18710e5f"
+      fabric8.io/git-branch: "main"
+      fabric8.io/git-url: "git@github.com:wohshon/camel-kafka-mysql.git"
       prometheus.io/port: "9779"
       prometheus.io/scrape: "true"
       discovery.3scale.net/discovery-version: "v1"
@@ -32,6 +35,10 @@ items:
 - apiVersion: "apps/v1"
   kind: "Deployment"
   metadata:
+    annotations:
+      fabric8.io/git-commit: "3b7b2e6799eb572004cd73ea4d59cf8c18710e5f"
+      fabric8.io/git-branch: "main"
+      fabric8.io/git-url: "git@github.com:wohshon/camel-kafka-mysql.git"
     labels:
       app: "kafka-fuse"
       provider: "fabric8"
@@ -48,6 +55,10 @@ items:
         group: "com.redhat"
     template:
       metadata:
+        annotations:
+          fabric8.io/git-commit: "3b7b2e6799eb572004cd73ea4d59cf8c18710e5f"
+          fabric8.io/git-branch: "main"
+          fabric8.io/git-url: "git@github.com:wohshon/camel-kafka-mysql.git"
         labels:
           rht.prod_ver: "7.8"
           rht.comp_ver: "1.0-SNAPSHOT"

@@ -27,7 +27,7 @@
   </route>
 
   <route id="kfk">
-<from uri="kafka:{{broker.topic.name}}?brokers={{broker.url}}:{{broker.port}}"/>
+<from uri="kafka:{{broker.topic.name}}?brokers={{broker.url}}:{{broker.port}}&amp;groupId={{broker.groupId}}"/>
     <log  message="KAFKA BODY: ${body}"/>
 
     <to uri="bean:myTransformer?method=request"/>
