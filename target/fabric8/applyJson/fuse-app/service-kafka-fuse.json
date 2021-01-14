@@ -1,0 +1,94 @@
+{
+  "apiVersion" : "v1",
+  "kind" : "Service",
+  "metadata" : {
+    "annotations" : {
+      "discovery.3scale.net/discovery-version" : "v1",
+      "discovery.3scale.net/port" : "8080",
+      "discovery.3scale.net/scheme" : "http",
+      "prometheus.io/port" : "9779",
+      "prometheus.io/scrape" : "true"
+    },
+    "creationTimestamp" : "2021-01-14T15:09:11Z",
+    "labels" : {
+      "app" : "kafka-fuse",
+      "discovery.3scale.net/discoverable" : "true",
+      "expose" : "true",
+      "group" : "com.redhat",
+      "provider" : "fabric8",
+      "version" : "1.0-SNAPSHOT"
+    },
+    "managedFields" : [ {
+      "apiVersion" : "v1",
+      "fieldsType" : "FieldsV1",
+      "fieldsV1" : {
+        "f:metadata" : {
+          "f:annotations" : {
+            "." : { },
+            "f:discovery.3scale.net/discovery-version" : { },
+            "f:discovery.3scale.net/port" : { },
+            "f:discovery.3scale.net/scheme" : { },
+            "f:prometheus.io/port" : { },
+            "f:prometheus.io/scrape" : { }
+          },
+          "f:labels" : {
+            "." : { },
+            "f:app" : { },
+            "f:discovery.3scale.net/discoverable" : { },
+            "f:expose" : { },
+            "f:group" : { },
+            "f:provider" : { },
+            "f:version" : { }
+          }
+        },
+        "f:spec" : {
+          "f:ports" : {
+            "." : { },
+            "k:{\"port\":8080,\"protocol\":\"TCP\"}" : {
+              "." : { },
+              "f:name" : { },
+              "f:port" : { },
+              "f:protocol" : { },
+              "f:targetPort" : { }
+            }
+          },
+          "f:selector" : {
+            "." : { },
+            "f:app" : { },
+            "f:group" : { },
+            "f:provider" : { }
+          },
+          "f:sessionAffinity" : { },
+          "f:type" : { }
+        }
+      },
+      "manager" : "okhttp",
+      "operation" : "Update",
+      "time" : "2021-01-14T15:09:11Z"
+    } ],
+    "name" : "kafka-fuse",
+    "namespace" : "fuse-app",
+    "resourceVersion" : "1241389",
+    "selfLink" : "/api/v1/namespaces/fuse-app/services/kafka-fuse",
+    "uid" : "dfba5ceb-76e4-461a-8b9c-2d8e65f91333"
+  },
+  "spec" : {
+    "clusterIP" : "172.30.216.16",
+    "ports" : [ {
+      "name" : "http",
+      "port" : 8080,
+      "protocol" : "TCP",
+      "targetPort" : 8080
+    } ],
+    "selector" : {
+      "app" : "kafka-fuse",
+      "group" : "com.redhat",
+      "provider" : "fabric8"
+    },
+    "sessionAffinity" : "None",
+    "type" : "ClusterIP"
+  },
+  "status" : {
+    "loadBalancer" : { }
+  }
+}
